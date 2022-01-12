@@ -2353,6 +2353,13 @@ domexception@^2.0.1:
   dependencies:
     webidl-conversions "^5.0.0"
 
+ecz-api@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ecz-api/-/ecz-api-1.2.0.tgz#038b0adb7893cdb0415bd615aa00f80fada8a484"
+  integrity sha512-n6QhzoG2F39Vsw0BrgAP7yKVSA63lU3W45pKto+/Kh6YnCbrQOKtToHDkt+YzR5QwhVjMr+KEjjGu65alIJ7AA==
+  dependencies:
+    react-native-electrode-bridge "1.5.x"
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
