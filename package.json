@@ -1,6 +1,6 @@
 {
   "name": "ecz-miniapp",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "scripts": {
     "android": "react-native run-android",
@@ -13,7 +13,8 @@
     "ecz-api": "1.2.0",
     "ern-navigation": "1.2.4",
     "react": "17.0.2",
-    "react-native": "0.66.4"
+    "react-native": "0.66.4",
+    "react-native-svg": "12.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
