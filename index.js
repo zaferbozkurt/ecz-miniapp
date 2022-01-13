@@ -1,9 +1,20 @@
-/**
- * @format
- */
-
-import {AppRegistry} from 'react-native';
-import App from './App';
+import {AppRegistry, LogBox} from 'react-native';
+import Channels from './src/channels';
+import NewsFeed from './src/newsfeed';
 import {name as appName} from './app.json';
+import {AppNavigator} from 'ern-navigation';
 
-AppRegistry.registerComponent(appName, () => App);
+LogBox.ignoreLogs([
+  'Module ElectrodeBridgeTransceiver requires main queue setup since it overrides `constantsToExport`',
+  'Sending `electrode.bridge.message` with no listeners registered.',
+]);
+// AppRegistry.registerComponent(appName, () => App);
+new AppNavigator(
+  {
+    Channels: Channels,
+    NewsFeed: NewsFeed,
+  },
+  {
+    initialScreen: 'NewsFeed',
+  },
+).registerAll(appName);
