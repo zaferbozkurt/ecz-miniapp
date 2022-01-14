@@ -1,6 +1,6 @@
-import {AppRegistry, LogBox} from 'react-native';
-import Channels from './src/channels';
-import NewsFeed from './src/newsfeed';
+import {LogBox} from 'react-native';
+import Channels from './src/channels/channels';
+import NewsFeed from './src/newsfeed/newsfeed';
 import {name as appName} from './app.json';
 import {AppNavigator} from 'ern-navigation';
 
@@ -9,7 +9,7 @@ LogBox.ignoreLogs([
   'Sending `electrode.bridge.message` with no listeners registered.',
 ]);
 // AppRegistry.registerComponent(appName, () => App);
-new AppNavigator(
+const appNavigator = new AppNavigator(
   {
     Channels: Channels,
     NewsFeed: NewsFeed,
@@ -17,4 +17,6 @@ new AppNavigator(
   {
     initialScreen: 'NewsFeed',
   },
-).registerAll(appName);
+);
+
+appNavigator.registerAll(appName);
